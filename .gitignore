@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
+=======
 lib-cov
 *.seed
 *.log
@@ -12,3 +19,4 @@ logs
 results
 
 npm-debug.log
+>>>>>>> 2b135d3daa86d03d4ecd7563880ae25e3f7d5ff5
