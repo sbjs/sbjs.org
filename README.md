@@ -18,7 +18,7 @@ should use a pull request to make changes.
 Since we gave it the alias 'upstream', we can `git pull upstream master` to get the latest code.
 DO NOT PUSH to https://github.com/sbjs/sbjs.org.git - use a pull request.
 
-Issuing a `git remove -v` you should see:
+Issuing a `git remote -v` you should see:
 
     origin  https://github.com/USERNAME/sbjs.org (fetch)
     origin  https://github.com/USERNAME/sbjs.org (push)
@@ -38,7 +38,9 @@ Now, issuing a `git remove -v` you should see:
 ## Building Project dependencies
 
 1. `npm install` # adds local npm packages
+2. `npm install -g bower` # installs bower package manager
 3. `bower update` # updates all bower packages
+4. `npm install -g grunt-cli` # installs the grunt command line interface.
 
 ## Voilà!
 
