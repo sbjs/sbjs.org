@@ -1,32 +1,15 @@
 'use strict';
 
 angular.module('sbjsApp')
-    .controller('MainCtrl', function ($scope, utils) {
-        console.log('MainCtrl.location: ', location);
-        console.log('MainCtrl.location.search: ', location.search);
-        var queryParams = location.search;
-        var params = utils.getParamsFromString(location.search);
-        console.log('MainCtrl.params.code: ', params);
-        console.log('MainCtrl.params.code: ', params.code);
+.controller('MainCtrl', function ($scope, utils) {
+  var options = ['client_id=f9aa961f63df8c7b766a','scope=user,user:email,public_repo'];
+  $scope.githubLoginUrl = 'https://github.com/login/oauth/authorize?'+options.join('&');
 
-        if(params.code){
-
-        }
-        // http://localhost/?code=537fb3f6697752be4951
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
-    })
-    .controller('AuthCtrl', function ($scope) {
-        console.log('AuthCtrl.location: ', location);
-        console.log('AuthCtrl.location.search: ', location.search);
-
-        // http://localhost/?code=537fb3f6697752be4951
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
-    });
+  //debug
+  console.log('MainCtrl.location: ', location);
+  console.log('MainCtrl.location.search: ', location.search);
+  // var queryParams = location.search;
+  var params = utils.getParamsFromString(location.search);
+  console.log('MainCtrl.params.code: ', params);
+  console.log('MainCtrl.params.code: ', params.code);
+});

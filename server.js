@@ -26,6 +26,8 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(express.cookieParser());
+app.use(express.session({secret: 'sbjsSecretHash'}));
 app.use(app.router);
 
 
@@ -54,11 +56,10 @@ if ('development' === app.get('env')) {
 // we could configure this to run in dev vs production. But make sure the default is for
 // production, as that is what azure will use to run the app
 app.get('/', function(request, response) {
+
   var code = request.query.code;
-
+  //TODO: refactor?
   if(code){
-    console.log('CODE: ', code);
-
     var options = {
       'data':{
         'client_id': githubCfg.client_id,
@@ -71,17 +72,16 @@ app.get('/', function(request, response) {
     };
 
     rest.post('https://github.com/login/oauth/access_token', options)
-    .on('complete', function(data, response){
-      console.log('DONE:', data);
-      if (response.statusCode == 200){
-        console.log(data); // prints HTML
-        console.log('access_token', data.access_token); // prints HTML
+    .on('complete', function(data, resp){
+      if (resp.statusCode == 200){
+        request.session.access_token = data.access_token;
+        response.redirect('/#/profile?access_token='+data.access_token);
       }
     });
+  }else{
+    response.render('index.html');
   }
-  response.render('index.html');
 });
-
 
 var port = process.env.PORT || 9000;
 // var port = app.get('port')

@@ -19,4 +19,14 @@ body {
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
+    margin: 10px auto;
+}
+
+.profile {
+    width: 430px;
+}
+
+.profile table tr th{
+    text-align: left;
+    width:  150px;
 }
