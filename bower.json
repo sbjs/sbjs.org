@@ -10,7 +10,9 @@
     "angular-resource": "~1.0.7",
     "angular-cookies": "~1.0.7",
     "angular-sanitize": "~1.0.7",
-    "angular-bootstrap": "*"
+    "angular-bootstrap": "*",
+    "angular-strap": "*"
+
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

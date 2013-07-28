@@ -32,6 +32,18 @@
 <script src="bower_components/json3/lib/json3.min.js"></script>
 <![endif]-->
 
+<!-- Top Navigation -->
+<div class="navbar" bs-navbar>
+  <div class="navbar-inner">
+    <a class="brand" href="#/">SBJS.org</a>
+    <ul class="nav">
+      <!-- You can use regular expressions. -->
+      <li data-match-route="/profile"><a href="#/profile">Profile</a></li>
+      <li data-match-route="/members"><a href="#/members">Members</a></li>
+    </ul>
+  </div>
+</div>
+
 <!-- Add your site or application content here -->
 <div class="container" ng-view=""></div>
 
@@ -57,7 +69,9 @@
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
+<script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->

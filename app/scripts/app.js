@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sbjsApp', ['ngCookies'])
+angular.module('sbjsApp', ['ngCookies','$strap.directives'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {templateUrl: 'views/main.html',controller: 'MainCtrl'})
