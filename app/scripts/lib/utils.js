@@ -3,18 +3,6 @@
 angular.module('sbjsApp')
 .service('utils', function($cookies, $location){
 
-  // Still trying to find a good way of handling tokens
-  this.getToken = function(){
-    var access_token = $location.search().access_token;
-    if (access_token && access_token !== "undefined"){
-      $cookies.token = $location.search().access_token;
-      $location.search('access_token', null);
-    }
-    // if we dont have a token, redirect to home to authenticate
-    if(!$cookies.token) { $location.path( '/' ); }
-    return $cookies.token;
-  };
-
   this.getParamsFromString = function (paramString) {
   // From: http://stackoverflow.com/a/2880929/39758
     if(paramString.charAt(0) === '?'){
