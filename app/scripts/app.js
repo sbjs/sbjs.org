@@ -7,6 +7,7 @@ angular.module('sbjsApp', ['ngCookies','$strap.directives'])
       .when('/auth', {templateUrl: 'views/auth.html', controller: 'AuthCtrl'})
       .when('/profile', {templateUrl: 'views/profile.html', controller: 'ProfileCtrl'})
       .when('/members', {templateUrl: 'views/members.html', controller: 'MembersCtrl'})
+      .when('/registration', {templateUrl: 'views/registration.html', controller: 'RegistrationCtrl'})
       .otherwise({redirectTo: '/'});
 
     //Interceptor is used in case the token becomes invalid while the session is active.
