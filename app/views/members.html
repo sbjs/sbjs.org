@@ -2,8 +2,12 @@
   <h1>Members</h1>
   <ul class="well">
     <li ng-repeat="member in members">
-      <img class="thumbnail" src="{{member.avatar_url}}">
-      <h2>{{member.login}}</h2>
+      <a href="{{ member.url }}">
+      	<img class="thumbnail" src="{{member.avatar_url}}">
+      </a>
+      <a href="{{ member.url }}">
+	    <h2>{{member.login}}</h2>
+      </a>
     </li>
   </ul>
 </div>
