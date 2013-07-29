@@ -30,3 +30,20 @@ body {
     text-align: left;
     width:  150px;
 }
+
+.members {
+    width: 400px;
+}
+
+.members li {
+    list-style: none;
+}
+
+.members li img.thumbnail {
+    width:80px;
+    display: inline-block;
+}
+
+.members li h2 {
+    display: inline-block;
+}

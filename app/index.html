@@ -38,6 +38,8 @@
     <a class="brand" href="#/">SBJS.org</a>
     <ul class="nav">
       <!-- You can use regular expressions. -->
+      <!-- don't panic if this looks sorta broken -->
+      <!-- Issue filed on GH @ https://github.com/mgcrea/angular-strap/issues/208 -->
       <li data-match-route="/profile"><a href="#/profile">Profile</a></li>
       <li data-match-route="/members"><a href="#/members">Members</a></li>
     </ul>
@@ -72,6 +74,7 @@
 <!-- <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
 <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
 <script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -79,6 +82,7 @@
 <script src="scripts/lib/utils.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/profile.js"></script>
+<script src="scripts/controllers/members.js"></script>
 
 <!-- endbuild -->
 </body>
