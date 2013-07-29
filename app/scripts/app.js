@@ -7,11 +7,6 @@ angular.module('sbjsApp', ['ngCookies','$strap.directives'])
       .when('/auth', {templateUrl: 'views/auth.html', controller: 'AuthCtrl'})
       .when('/profile', {templateUrl: 'views/profile.html', controller: 'ProfileCtrl'})
       .when('/members', {templateUrl: 'views/members.html', controller: 'MembersCtrl'})
-      .when('/registration', {
-        templateUrl: 'views/registration.html',
-        controller: 'RegistrationCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+      .when('/registration', {templateUrl: 'views/registration.html', controller: 'RegistrationCtrl'})
+      .otherwise({redirectTo: '/'});
   });

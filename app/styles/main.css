@@ -22,28 +22,24 @@ body {
     margin: 10px auto;
 }
 
-.profile {
-    width: 430px;
-}
+.profile { width: 430px; }
 
 .profile table tr th{
     text-align: left;
     width:  150px;
 }
 
-.members {
-    width: 400px;
-}
+.members { width: 400px; }
 
-.members li {
-    list-style: none;
-}
-
-.members li img.thumbnail {
-    width:80px;
+.members ul { margin: 0; }
+.members li { list-style: none; }
+.members a { text-decoration: none; }
+.members li .thumbnail {
+    width: 80px;
     display: inline-block;
 }
 
-.members li h2 {
+.members h2 {
     display: inline-block;
+    margin: 10px 0 10px 10px;
 }
