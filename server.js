@@ -10,7 +10,7 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     rest = require('restler'),
-    githubCfg = require('../github.conf.json');
+    githubCfg = require('./github.conf.json');
 
 var app = express();
 
