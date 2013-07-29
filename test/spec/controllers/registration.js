@@ -20,7 +20,7 @@ describe('Controller: RegistrationCtrl', function () {
     });
   }));
 
-  it("is defined", function() {
+  it("posts to github fork repo link", function() {
     cookies.token = "123456654321";
     var thenSpy = jasmine.createSpy("then");
     spyOn(http, "post").andReturn({
