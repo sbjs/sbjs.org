@@ -16,10 +16,8 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it("defines the githubLoginUrl", function() {
-    expect(scope.githubLoginUrl).toEqual("https://github.com/login/oauth/authorize?client_id=f9aa961f63df8c7b766a&scope=user,user:email,public_repo");
-  });  
-
-  
+  it('defines the githubLoginUrl', function() {
+    expect(scope.githubLoginUrl).toEqual('https://github.com/login/oauth/authorize?client_id=f9aa961f63df8c7b766a&scope=user,user:email,public_repo');
+  });
 
 });

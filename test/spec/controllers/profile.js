@@ -2,7 +2,6 @@
 
 describe('Controller: ProfileCtrl', function () {
 
-  
   var ProfileCtrl,
     scope;
 
@@ -12,6 +11,6 @@ describe('Controller: ProfileCtrl', function () {
     ProfileCtrl = $controller('ProfileCtrl', {
       $scope: scope
     });
-  })); 
+  }));
 
 });
