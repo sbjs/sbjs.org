@@ -18,7 +18,7 @@ angular.module('sbjsApp', ['ngCookies','$strap.directives'])
 
       function error(response) {
         if(response.status === 401) {
-          $location.path('/login');
+          $location.path('/');
           return $q.reject(response);
         }
         else {
