@@ -12,6 +12,7 @@ files = [
   'app/bower_components/angular-cookies/angular-cookies.js',
   'app/bower_components/angular-strap/dist/angular-strap.js',
   'app/bower_components/underscore/underscore.js',
+  'app/bower_components/angular-fire/angularFire.js',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
   'test/mock/**/*.js',

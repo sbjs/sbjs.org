@@ -10,21 +10,17 @@ describe('Controller: MembersCtrl', function () {
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope, $http, $cookies) {
-    cookies = $cookies;
-    http = $http;
     scope = $rootScope.$new();
 
-    // stubbing here so constructor does not trigger HTTP GET request
-    getSpy = spyOn(http, "get");
-    getSpy.andReturn({ then: jasmine.createSpy("then") });
-
     MembersCtrl = $controller('MembersCtrl', {
-      $scope: scope,
-      $http: http,
-      $cookies : cookies
+      $scope: scope
     });
 
   }));
+
+  it("has members defined", function() {
+    expect(scope.members).toBeDefined();
+  });
 
   describe("#parseMembers", function() {
     it("parses owner objects out of result data", function() {
