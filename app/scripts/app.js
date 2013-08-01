@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sbjsApp', ['ngCookies','$strap.directives'])
+angular.module('sbjsApp', ['ngCookies','$strap.directives','firebase'])
   .config(function ($routeProvider, $httpProvider) {
     $routeProvider
       .when('/', {templateUrl: 'views/main.html', controller: 'MainCtrl'})
@@ -8,6 +8,10 @@ angular.module('sbjsApp', ['ngCookies','$strap.directives'])
       .when('/profile', {templateUrl: 'views/profile.html', controller: 'ProfileCtrl'})
       .when('/members', {templateUrl: 'views/members.html', controller: 'MembersCtrl'})
       .when('/registration', {templateUrl: 'views/registration.html', controller: 'RegistrationCtrl'})
+      .when('/fire', {
+        templateUrl: 'views/fire.html',
+        controller: 'FireCtrl'
+      })
       .otherwise({redirectTo: '/'});
 
     //Interceptor is used in case the token becomes invalid while the session is active.

@@ -12,8 +12,8 @@
     "angular-sanitize": "~1.0.7",
     "angular-bootstrap": "*",
     "angular-strap": "*",
-    "underscore": "*"
-
+    "underscore": "*",
+    "angular-fire":"*"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

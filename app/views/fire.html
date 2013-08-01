@@ -1,0 +1,8 @@
+<div class="notes">
+  <div class="note well" ng-repeat="note in notes">
+    <h2>{{note.githubUserId}}</h2>
+    <div>{{note.message}}</div>
+  </div>
+  <textarea ng-model="newMessage"></textarea>
+  <button ng-click="addNote()">Add Note</button>
+</div>
