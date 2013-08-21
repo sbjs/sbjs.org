@@ -32,6 +32,22 @@
 <script src="bower_components/json3/lib/json3.min.js"></script>
 <![endif]-->
 
+<!-- Top Navigation -->
+<div class="navbar" xbs-navbar>
+  <div class="navbar-inner">
+    <a class="brand" href="#/">SBJS.org</a>
+    <ul class="nav">
+      <!-- You can use regular expressions. -->
+      <!-- don't panic if this looks sorta broken -->
+      <!-- Issue filed on GH @ https://github.com/mgcrea/angular-strap/issues/208 -->
+      <li data-match-route="/profile"><a href="#/profile">Profile</a></li>
+      <li data-match-route="/members"><a href="#/members">Members</a></li>
+      <li data-match-route="/fire"><a href="#/fire">Fire</a></li>
+      <li data-match-route="/registration"><a href="#/registration">Become a Member</a></li>
+    </ul>
+  </div>
+</div>
+
 <!-- Add your site or application content here -->
 <div class="container" ng-view=""></div>
 
@@ -57,14 +73,25 @@
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script> -->
+<script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script src="bower_components/angular-fire/angularFire.js"></script>
+
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/lib/utils.js"></script>
 <script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/profile.js"></script>
+<script src="scripts/controllers/members.js"></script>
+<script src="scripts/services/auth.js"></script>
 
+<script src="scripts/controllers/registration.js"></script>
+<script src="scripts/controllers/fire.js"></script>
 <!-- endbuild -->
 </body>
 </html>

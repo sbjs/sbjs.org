@@ -16,7 +16,8 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('defines the githubLoginUrl', function() {
+    expect(scope.githubLoginUrl).toEqual('https://github.com/login/oauth/authorize?client_id=f9aa961f63df8c7b766a&scope=user,user:email,public_repo');
   });
+
 });

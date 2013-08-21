@@ -44,4 +44,4 @@ Now, issuing a `git remove -v` you should see:
 
 ## Voilà!
 
-You should now be able to run `grunt server`
+You should now be able to run `grunt server` or `node --debug server.js` if you want node.js with express.
